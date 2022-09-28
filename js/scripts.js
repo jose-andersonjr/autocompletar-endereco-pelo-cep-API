@@ -107,3 +107,14 @@ closeButton.addEventListener("click", () => toggleMessage());
 
 
 // Save Address
+addressForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    toggleLoader();
+
+    setTimeout(() => {
+        toggleLoader();
+        toggleMessage("Endereço salvo com sucesso");
+        addressForm.reset();
+    }, 1500)
+})
